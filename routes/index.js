@@ -12,6 +12,7 @@ router.post('*', (req, res) => {
     const source = escape(req.body.source)
 
     res.send(source)
+    console.log('POST Request')
 })
 
 const escape = (source) => {
