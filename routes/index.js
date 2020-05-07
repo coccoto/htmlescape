@@ -11,7 +11,9 @@ router.post('*', (req, res) => {
 
     const source = escape(req.body.source)
 
-    res.send(source)
+    res.json({
+        source: source
+    })
 })
 
 const escape = (source) => {
