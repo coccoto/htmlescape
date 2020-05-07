@@ -16,6 +16,6 @@ app.use(express.urlencoded({ extended: true }))
 // routes setup
 app.use('*', index)
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('server running')
 })
