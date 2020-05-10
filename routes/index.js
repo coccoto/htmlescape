@@ -15,7 +15,7 @@ router.post('*', (req, res) => {
 
 const escape = (source) => {
     return source
-        .replace(/&/g, '&amp;')
+        // .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
