@@ -1,21 +1,18 @@
-// RootPath setup
-global.Root = __dirname
+const Express = require('express')
 
-const express = require('express')
-const path = require('path')
+/**
+ * routes setup
+ */
+const Router = require(ROOT + '/routes/index')
 
-// routes require
-const index = require(path.resolve(Root, 'routes', 'index'))
+const app = Express()
 
-const app = express()
+/**
+ * request option
+ */
+app.use(Express.json())
+app.use(Express.urlencoded({ extended: true }))
 
-// request
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+Router(app)
 
-// routes setup
-app.use('*', index)
-
-app.listen(3001, () => {
-    console.log('server running')
-})
+module.exports = app
