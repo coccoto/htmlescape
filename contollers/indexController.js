@@ -7,13 +7,18 @@ module.exports = (req, res) => {
     }
 
     const escape = () => {
-        return EscapeModel(req.body.source)
+        const source = req.body.source
+        console.log('source: ' + source)
+        return EscapeModel(source)
     }
 
     const main = () => {
         const result = escape()
+        console.log('result: ' + result)
         header()
-        res.send(result)
+        res.json({
+            source: result
+        })
     }
     return main()
 }
