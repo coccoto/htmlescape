@@ -17,7 +17,7 @@ app.use(Express.urlencoded({ extended: true }))
  * header option
  */
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://coccoto.com')
+    res.header('Access-Control-Allow-Origin', 'https://www.coccoto.com')
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
     next()
 })
