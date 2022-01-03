@@ -1,5 +1,6 @@
 module.exports = (source) => {
     const escape = () => {
+        console.log(source)
         return source
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;')

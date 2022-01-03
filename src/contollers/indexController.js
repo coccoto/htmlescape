@@ -1,7 +1,8 @@
-const EscapeModel = require(ROOT + '/models/escapeModel')
+const EscapeModel = require(ROOT + '/src/models/escapeModel')
 
 module.exports = (req, res) => {
     const escape = () => {
+        console.log(req.body)
         const source = req.body.source
         return EscapeModel(source)
     }
