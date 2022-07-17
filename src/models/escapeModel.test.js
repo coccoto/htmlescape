@@ -1,5 +1,5 @@
 const path = require('path')
-const EscapeModel = require(path.resolve(__dirname, '..', '..', 'models', 'escapeModel'))
+const EscapeModel = require(path.resolve(__dirname, 'escapeModel'))
 
 test('EscapeModel', () => {
     expect(EscapeModel('<')).toBe('&lt;')

@@ -23,5 +23,4 @@ app.use((req, res, next) => {
 })
 
 Router(app)
-
 module.exports = app

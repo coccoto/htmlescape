@@ -1,8 +1,8 @@
-const IndexController = require(ROOT + '/src/contollers/indexController')
+const EscapeController = require(ROOT + '/src/contollers/escapeController')
 
 module.exports = (app) => {
-    app.route('/').post((req, res) => {
-        IndexController(req, res)
+    app.route('/api/escape').post((req, res) => {
+        EscapeController(req, res)
         return
     })
 }
